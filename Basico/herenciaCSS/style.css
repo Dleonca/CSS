@@ -1,0 +1,38 @@
+/* 
+ 1 Reesetear los estilos por defecto de los navegadores
+la hoja de estilo normalize. css
+se utiliza para que los estilos de diferentes navegadores 
+sean los mismos y no hayan diferencias
+
+ 2 los prefijos propietarios:
+ autoprefixer: sirve para ->
+
+ Prepros
+
+
+ 
+*/
+
+body{
+    background-color: #333;;
+}
+
+.title{
+    color: cyan;
+    font-size: 30px;
+}
+/* no heredan */
+.text{
+    color:red;
+}
+.link{
+    /* la palabra clave inherit forza la herencia */
+    color: inherit;
+}
+.list{
+    color: indianred;
+}
+/*para evitar herencia palabra clave initial  */
+.list-item-ex{
+    color: initial;
+}

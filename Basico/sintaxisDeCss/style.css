@@ -1,0 +1,79 @@
+/*
+selectores: elemento que vamos a aplicar estilos
+Propiedad: lo que vamos a cambiar
+valor: el nuevo valor que va a tener
+Propierdad:valor -> se le denomina declaracion
+al conjunto selector+ declaracion se le denomina regla 
+*/
+/* 1 selectores simples
+-selectores elementales
+-selectores de atributo
+*/
+
+/*1.1 selectores elementales*/
+/* selector universal*/
+*{
+    background-color: lightgreen;
+}
+/* selector de tipo o de etiquetas*/
+h1{
+    color: green;
+}
+/*-------------------------------------------------*/
+/*1.2 selectores  de atributo*/
+/* selector id*/
+#title{
+background-color: honeydew;
+}
+/* selector clase*/
+.subtitle{
+    background-color: khaki;
+}
+.text{
+    color: #002128;
+    }
+/* selector otros atributos*/
+[href]{
+    background-color: rgb(137, 96, 233);
+}
+[href="https://www.google.com/"]{
+    background-color: rgb(230, 171, 44);
+} 
+[href^="color"]{
+    background-color: rgb(87, 179, 233);
+} 
+[href*="es"]{
+    background-color: rgb(6, 88, 57);
+}
+[href$="rojo"]{
+    background-color: rgb(16, 29, 218);
+    color: white;
+}
+[lang|="en"]{
+    color: orangered;
+}
+/*-------------------------------------------------*/
+/* 2 selectores compuestos
+- selectores agrupados
+-selectores combinados
+-pseudoclases
+-pseudoelementos
+*/
+/* selectores agrupados*/
+.tex1, 
+.tex2,
+.tex3{
+    color:green;
+}
+/* selectores combinadores descendiente*/
+div .parrafo{
+    background-color: greenyellow;
+}
+/* selectores combinadores de hermano siguiente*/
+.parrafo + .title6{
+    color:limegreen;
+}
+/* selectores combinadores de hermanos siguientes*/
+.parrafo ~ p {
+color:red;
+}

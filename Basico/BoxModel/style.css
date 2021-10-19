@@ -1,0 +1,179 @@
+/* Propiedad Margin: fuera de la caja
+Es un shorthand(propiedad abreviada)
+controla los 4 lados posibles a los que dar margenes.
+
+margin-top: margen superior
+margin-right: margen derecho
+margin-bottom: margen inferior
+margin-left: margen izquierdo
+
+admiten hasta 4 valores, estos van en orden de las 
+agujas del reloj
+
+4 val diferentes-> margin(top- right -bottom -left)
+3 val diferentes-> margin(top - left/right - bottom)
+2 val diferentes-> margin(top/bottom - left/right)
+1 val para todos los lados
+
+los margenes verticales entre elementos se solapan colapsan
+ para solucionar el colapsado de margenes entre padres e hijos: 
+ usar overflow: hidden
+ o padding-top: 0.1px
+ 0 border-top: 0,1px
+*/
+
+
+body{
+    background-color: #333;
+    color: #fff; 
+}
+.bloque {
+    background-color: purple;
+    width: 300px;
+    height: 30px;
+    margin: 10px 15px 20px 25px;
+    /* para que funcione necesita tener un alto
+     y ancho definido. calcula el margen automaticamente.
+     tambien puedes centrar un elemento de bloque
+      */
+    margin-left: auto;
+    margin-right: auto;
+}
+.inline{
+  background-color: crimson;  
+  color: inherit;
+  /* los elementos de linea no funcionan las propiedades
+  width - height
+  */
+  width: 100px;
+  height: 100px;
+   /* los elementos de linea no funcionan las propiedades
+  margin top and margin bottom no se admite margen vertical
+  */
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+/* PADDING : dentro de la caja
+Es un shorthand(propiedad abreviada)
+controla los 4 lados posibles a los que dar margenes.
+
+padding-top: margen superior
+padding-right: margen derecho
+padding-bottom: margen inferior
+padding-left: margen izquierdo
+
+admiten hasta 4 valores, estos van en orden de las 
+agujas del reloj
+
+4 val diferentes-> padding(top- right -bottom -left)
+3 val diferentes-> padding(top - left/right - bottom)
+2 val diferentes-> padding(top/bottom - left/right)
+1 val para todos los lados
+
+no hay ninguna limitacion en los elementos de linea.
+*/
+.text{
+    background-color: black;
+    padding: 10px 20px 30px 40px;
+}
+
+/* 
+BORDER : de la caja esta entre el margen y padding
+Es un shorthand(propiedad abreviada)
+agrupa 3 propiedades:
+border-> width - style - color
+border-width: ancho de borde
+    border-top-width ->
+    border-right-width ->
+    border-bottom-width ->
+    border-left-width ->
+border-style: estilo de borde
+    border-top-style ->
+    border-right-style ->
+    border-bottom-style ->
+    border-left-style ->
+border-color: color de borde
+    border-top-color ->
+    border-right-color ->
+    border-bottom-color ->
+    border-left-color ->
+
+ BORDER RADIUS: redondea las esquinas con circulos invisibles
+ es un shorthand que engloba 4 propiedades: 
+
+  border-top-left-radius
+  border-top-right-radius
+  border-bottom-right-radius
+  border-bottom-left-radius
+
+ BORDER RADIUS: a traves de elipses
+ se asignan dos valores a cada propiedad: 
+  border-top-left-radius -> x y
+  border-top-right-radius -> x y
+  border-bottom-right-radius -> x y
+  border-bottom-left-radius -> x y
+  border radious --> x/y para cada lado
+*/
+.boton{
+    width: 70px;
+    height: 70px;
+    border-color: brown blue violet yellow;
+    border-width: 5px 6px ;
+    border-style: solid double;
+    border-radius:  10px;
+    box-sizing: border-box;
+}
+
+/* BOX-SIZING : 
+Es la propiedad que nos permite controlar el càlculo que 
+hace el navegador a la hora de modificar las propiedades 
+content, padding y border.
+los 2 valores que podemos darle son:
+content-box -> valor por defecto
+border-box -> calculo de tamaño del elemento
+incluyendo padding y border
+
+*/
+.caja{
+    margin: 5px;
+    background-color: turquoise;
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    border: 5px solid blue;
+    border-radius: 40px 50px /90px 100px ; 
+    box-sizing: border-box;
+}
+/* OVERFLOW : 
+Es la propiedad que nos permite controlar el contenido 
+que se desborda del contenedor
+es un shorthand que engloca el eje x/y
+tiene 4 posibles valores: 
+
+visible-> valor por defecto
+hidden-> se oculta el contenido que se desborda
+scroll-> barra de dezplazamiento
+auto-> aparece barra si desborda
+*/
+.cajatexto{
+    height: 150px;
+    width: 150px;
+    background-color: burlywood;
+    color:black;
+    overflow: auto;
+   display: none;
+}
+
+
+/* DISPLAY : 
+Esta propiedad nos sirve para cambiar el contexto de 
+los elementos dentro del navegador
+
+admite varios valores
+none-> hacee que el elemento no se muestre pero sigue cargandose
+block-> Hace que el elemento se de bloque
+inline-> hace que el elemento se de linea
+inline-block-> hace que el elemento sea de linea pero admite
+medidas y margenes verticales
+*/

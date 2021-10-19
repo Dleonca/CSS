@@ -1,0 +1,91 @@
+/*
+TEXT-ALIGN: nos permite alinear horizontalmente el contenido
+de un elemento de bloque siempre que el contenido NO  TENGO ANCHO DECLARADO
+acepta 4 posibles valores
+text-align: left
+text-align: right
+text-align: center
+text-align: justify
+*/
+.texto{
+    text-align: justify;
+}
+.boton{
+    background-color: orange;
+    border: 2px solid orangered;
+    width: 100px;
+    padding: 10px 0;
+    margin: 20px 0;
+}
+.link{
+    color: orangered;
+    display: block;
+    text-align: center;
+}
+img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/*
+OUTLINE: 
+NOS PERMITE DIBUJAR BORDE POR FUERA DEL MODELO DE CAJA
+
+es un shorthand que engloba: 
+outline-width
+outline-style
+outline-color
+tiene las mismas propiedades que el border pero con algunas
+diferencias.
+no ocupa sitio ya que no hace parte del box model
+no se puede redondear
+no se puede controlar los bordes de forma independiente
+la propiedad outline-offset que nos permite aumentar o 
+disminuir la distancia del outline en respecto a la caja
+que pertenece
+*/
+.border,
+.outline{
+background-color: 100px;
+width: 100px;
+padding: 10px 25px;
+margin: 50px 100px;
+}
+.border{
+    outline: 10px dashed green;
+    outline-offset: 10px;
+    border: 5px solid aqua;
+}
+.outline{
+    outline: 3px solid green;
+    outline-offset: -13px;
+    border: 5px solid aqua;
+}
+
+/*
+BOX SHADOW
+crea un clon de la caja respetando la forma de su box model
+(ancho, alto redondez)
+valores: 
+offset-x ->dezplazamiento en x (obligatorio)
+offset-y ->dezplazamiento en y (obligatorio)
+blur-radius ->desenfoque de la sombra
+spread-radius -> Expancion de la sombra
+color-> el color de la sombra
+inset -> sombra en el interior de la caja
+
+*/
+.box{
+    background-color: orangered;
+    width: 200px;
+    padding: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    box-shadow: 5px 5px teal, 10px 10px blue, 15px 15px purple ;
+}

@@ -1,0 +1,39 @@
+/* 
+ Especificidad-> Establece como de espcifico es un selector para
+ saber que estilo aplicar.
+ El calculo se realiza en la siguiente formula:
+ Cascada
+ herencia
+
+ el calculo se realiza de la siguiente manera:
+ 1 etiquetas y pseudoelementos 0,0,1
+ 2 clases, atributos y pseudoclases 0,1,0
+ 3 Ids 1,0,0
+ 4 estilos en linea 1,0,0,0
+
+ !important lo que hace es omitir la especificidad, no es recomendado usar
+ utilizar clases la mayoria de veces
+
+ para revisar los temas de espcificidad en 
+ CSS SPECIFICITY GRAPH GENERATOR pagina web
+ NOTA: un buen css se tiene que ver lo mas lineal posible.
+
+*/
+h1.tittle#tittle{
+    background-color: purple;
+}
+h1{
+    background-color: red;
+}
+.tittle{
+    background-color: blue;
+}
+#tittle{
+    background-color: green;
+}
+h1.tittle{
+    background-color: yellow;
+}
+h1#tittle{
+    background-color: teal;
+}
